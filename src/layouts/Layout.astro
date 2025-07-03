@@ -1,3 +1,8 @@
+---
+import TopBar from '@components/topBar/TopBar.astro'
+import '@styles/global.css'
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -7,7 +12,10 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body>
+	<body class="bg-gradient-to-br from-greenDark-900 to-greenDark-950">
+		<header>
+			<TopBar />
+		</header>
 		<slot />
 	</body>
 </html>

@@ -1,0 +1,23 @@
+---
+import Title from "./Title.astro";
+import Parragraph from "./Parragraph.astro";
+import Image from "./Image.astro";
+import Arrows from "./Arrows.astro";
+---
+
+<section>
+  <div class="hero-bg absolute top-0 left-0 right-0 bottom-0">
+
+  </div>
+  <div class="absolute top-0 left-0 bottom-0 right-0 bg-black/50 flex flex-col items-center justify-start gap-24 ">
+  <Title />
+  <Parragraph />
+  <Arrows />
+  </div>
+</section>
+
+<style>
+  .hero-bg{
+    background-image: url("../../assets/bg_header.jpg");
+  }
+</style>
