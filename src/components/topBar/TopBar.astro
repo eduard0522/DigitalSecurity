@@ -1,11 +1,69 @@
 ---
+import { Icon } from "astro-icon/components"
 import Button from "./Button.astro"
 import List from "./List.astro"
 import Logo from "./Logo.astro"
----
 
-<nav class="flex relative z-20 items-center justify-between px-12 py-2 bg-slate-500/30 backdrop-blur-[4px] border-b border-white-700/50">
+
+---
+<nav class="  md:hidden md:invisible md:scale-0 flex relative z-40 items-center justify-between p-2 w-full bg-greenDark-900/50  backdrop-blur-[4px] nav-movil ">
+    <Logo />
+    <div class="menu-button">
+      <Icon  name="menu" class="text-white-700 text-5xl"/>
+    </div>
+</nav>
+
+<nav class=" transition-all duration-100 flex flex-col fixed top-0 left-0 right-0 bottom-0 gap-8 z-40  items-center justify-between p-4 bg-greenDark-900/50  backdrop-blur-[4px] closed hamburger-menu">
+  <Logo />
+  <div class="closed-menu absolute top-5 right-2"> 
+    <Icon  name="closed-menu"  class="text-4xl text-white-700"/> 
+  </div>
+  <List />
+  <Button />
+</nav>
+
+<nav class="hidden invisible md:visible md:flex relative z-40  items-center justify-between px-12 py-2 md:bg-slate-700/30 backdrop-blur-[4px] border-b border-white-700/50">
   <Logo />
   <List />
   <Button />
 </nav>
+
+<style>
+  .closed{
+    visibility: hidden;
+    scale: 0;
+  }
+</style>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = document.querySelector(".menu-button") 
+
+    if (! menuButton || !(menuButton instanceof HTMLElement)){
+      console.log("no hay boton")
+      return
+    } 
+    menuButton.addEventListener("click", () => {
+      const navMovil = document.querySelector(".nav-movil");
+      const hamburgerMenu = document.querySelector(".hamburger-menu");
+
+      if (!(navMovil instanceof HTMLElement) || !(hamburgerMenu instanceof HTMLElement)) return;
+ 
+      navMovil.classList.add("closed");
+      hamburgerMenu.classList.remove("closed"); 
+
+      const closedMenu = document.querySelector(".closed-menu")
+
+    if(!closedMenu || !(closedMenu instanceof HTMLElement)) return;
+      closedMenu.addEventListener("click" , () => {
+      console.log("clik")
+      navMovil.classList.remove("closed");
+      hamburgerMenu.classList.add("closed");
+      })
+    });
+
+    
+    
+  });
+</script>

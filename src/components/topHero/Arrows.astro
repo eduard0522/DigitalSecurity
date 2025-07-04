@@ -2,8 +2,34 @@
 import {Icon} from "astro-icon/components"
 ---
 
-<div class="flex flex-col items-center justify-center"> 
-  <Icon class="text-8xl rotate-180 text-white-700" name="ep-arrow-up"/>
-  <Icon class="text-6xl rotate-180 text-white-700" name="ep-arrow-up"/>
-  <Icon class="text-4xl rotate-180 text-white-700" name="ep-arrow-up"/>
+<style>
+@keyframes caidaSuave {
+  0% {
+    opacity: 1;
+    transform: translateY(50px);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+.flecha {
+  animation: caidaSuave 2s linear infinite;
+}
+
+.delay-1 { animation-delay: 0s; }
+.delay-2 { animation-delay: 0.3s; }
+.delay-3 { animation-delay: 0.6s; }
+
+</style>
+
+<div class="flex flex-col items-center md:pt-24 justify-center ">
+  <Icon class="flecha delay-1 text-8xl rotate-180 text-white-700 " name="ep-arrow-up"/>
+  <Icon class="flecha delay-2 text-6xl rotate-180 text-white-700 opacity-0 -translate-y-8" name="ep-arrow-up"/>
+  <Icon class="flecha delay-3 text-4xl rotate-180 text-white-700 opacity-0 -translate-y-10" name="ep-arrow-up"/>
 </div>
