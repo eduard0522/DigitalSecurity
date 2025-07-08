@@ -1,0 +1,40 @@
+---
+import Title from "@components/Titles/Title.astro"
+import AboutImage from "../../assets/aboutMeImage.jpg?url"
+import Parragraph from "./Parragraph.astro"
+import Subtitle from "@components/Titles/Subtitle.astro"
+
+const content = [
+  {
+    title: "Nuestra Historia:  Comienzos memorables",
+    text: "En Digital Security, nos dedicamos a ofrecer soluciones tecnológicas seguras e innovadoras. Desde nuestros inicios, hemos trabajado incansablemente para mejorar, mantener e instalar sistemas de seguridad que garanticen la tranquilidad de nuestros clientes. A través de la experiencia y la mejora constante de nuestras técnicas, nos hemos consolidado como una de las empresas más expertas y confiables en el ámbito tecnológico y de seguridad."
+  },
+   {
+    title: "Nuestro compromiso",
+    text: "Contamos con un equipo altamente capacitado y comprometido, dispuesto a desempeñar cada tarea con el máximo nivel de perfección. Para nosotros, cada día y cada proyecto representa un nuevo paso hacia nuestra meta: consolidarnos como una empresa reconocida por su excelencia, calidad y dedicación ."
+  },
+    {
+    title: "Innovación que proteje",
+    text: "Nos esforzamos por integrar las últimas innovaciones tecnológicas en cada solución que ofrecemos. Desde sistemas de videovigilancia hasta instalaciones  y manteniemiento de fibra óptica, mantenimiento de equipos  y cercas eléctricas, trabajamos con equipos de alta calidad para garantizar la seguridad y tranquilidad de nuestros clientes en cualquier entorno."
+  },
+]
+---
+
+<article class="px-8">
+  <Title title="quienes somos" />
+  <p class="font-semibold text-xl md:text-3xl uppercase text-white-700 text-center p-12"> vigilancia, protección y tecnología a tu alcance. </p>
+  <div class="flex gap-8">
+    <img src={AboutImage} alt="Imagen donde se aprecia un conjunto de herramientas de trabajo">
+    <div>
+      {
+        content.map((item) => {
+          return(
+            <Subtitle text={item.title}/>
+            <Parragraph text={item.text}/>
+          )
+        })
+      }
+    </div>
+  </div>
+</article>
+
