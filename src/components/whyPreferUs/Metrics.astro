@@ -1,0 +1,33 @@
+---
+import MetricCard from "./MetricCard.astro"
+
+const metrics = [ 
+  {
+    number: "100",
+    text: "proyectos"
+  },
+    {
+    number: "30",
+    text: "empresas"
+  },
+    {
+    number: "3",
+    text: "años"
+  },
+    {
+    number: "1000",
+    text: "experiencias"
+  },
+
+]
+---
+
+<section class="w-full bg-white-700/9 rounded-xl mt-8 md:mt-12 grid grid-cols-4 p-2">
+        {
+          metrics.map((metric) => {
+            return(
+              <MetricCard metric={metric}/>
+            )
+          })
+        }
+</section>

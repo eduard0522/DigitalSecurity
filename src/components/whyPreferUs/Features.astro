@@ -1,0 +1,38 @@
+---
+import FeatureCard from "./FeatureCard.astro"
+
+const features = [
+  {
+    icon:"quality",
+    title: "calidad",
+    content: "contamos con años de experiencia en el sector, perfeccionando nuestras técnicas para brindarte soluciones eficaces y de calidad."
+  },
+{
+    icon:"commitment",
+    title: "compromiso",
+    content: "cada proyecto que asumimos lo realizamos con dedicación y excelencia, porque tu tranquilidad es nuestra prioridad."
+  },
+  {
+    icon:"personalization",
+    title: "personalización",
+    content: "nos adaptamos a tus necesidades específicas, ofreciendo soluciones únicas y ajustadas a tus requerimientos."
+  },
+  {
+    icon:"innovation",
+    title: "innovacion",
+    content: "Ofrecemos tecnología de vanguardia para optimizar procesos, conectar mejor y proteger tus espacios con sistemas inteligentes."
+  },
+]
+---
+
+<section class="grid grid-cols-1  md:grid-cols-4 mt-12 gap-12 place-items-center">
+
+  {
+    features.map((feature) => {
+      return(
+        <FeatureCard feature={feature} />
+      )
+    })
+  }
+
+</section>

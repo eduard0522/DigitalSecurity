@@ -1,0 +1,41 @@
+---
+import Title from '@components/titles/Title.astro'
+import { Icon } from 'astro-icon/components'
+
+const services = [
+  {
+    icon: 'camera',
+    title: 'Instalación y mantenimiento de sistemas de seguridad',
+  },
+  {
+    icon: 'networks',
+    title: 'Instalación y mantenimiento de redes internas o externas.',
+  },
+  {
+    icon: 'pc',
+    title: 'Instalación y mantenimiento de equipos de computo.',
+  },
+  {
+    icon: 'code',
+    title: 'Diseño y desarrollo de páginas y aplicativos web.',
+  },
+]
+---
+
+<section class='mt-12 w-full'>
+  <Title title='¿En que podemos ayudarte? ' />
+
+  {
+    services.map((service) => {
+      return (
+        <article class='flex gap-4 md:gap-12 border-b-2 border-white-700 group md:not-first:w-2/3 mx-auto mt-12 pb-2 justify-between'>
+          <Icon name={service.icon} class='text-5xl text-white-700 cursor-pointer' />
+          <h3 class='uppercase text-sm text-center  md:text-xl text-white-700 cursor-pointer'>
+           {service.title}
+          </h3>
+          <Icon name='arrow-circle' class='text-5xl cursor-pointer text-white-700 group-hover:text-yellow-primary-600' />
+        </article>
+      )
+    })
+  }
+</section>

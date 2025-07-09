@@ -2,11 +2,19 @@
 import TopHero from "@components/topHero/TopHero.astro";
 import Layout from "@layouts/Layout.astro";
 import AboutMe from "@components/AboutMe/AboutMe.astro";
+import WhyPreferUs from "@components/WhyPreferUs/WhyPreferUs.astro";
+import Services from "@components/services/Services.astro";
+import Contact from "@components/Contact/Contact.astro";
 ---
 
 <Layout> 
   <TopHero />
-  <AboutMe />
+  <main class="max-w-(--max-w-8xl) mx-auto px-4 md:px-0"> 
+    <AboutMe />
+    <WhyPreferUs />
+    <Services />
+    <Contact />
+  </main>
 </Layout>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br>
