@@ -1,17 +1,37 @@
 ---
 import Title from "@components/titles/Title.astro";
+import Form from "./form/Form.astro"
+
 import ArmanLogo from "../../assets/logos/arman.png?url";
 import UbanetLogo from "../../assets/logos/ubanet.png?url";
 import ConceptosPlasticosLogo from "../../assets/logos/conceptos_plasticos.png?url";
 
+const companys = [
+  {
+    name: "Ubanet.co",
+    url : UbanetLogo,
+  },
+    {
+    name: "Conceptos plasticos",
+    url :ConceptosPlasticosLogo,
+  },
+  {
+    name: "Arman juegos y parques",
+    url : ArmanLogo,
+  }
+]
 
 ---
 
 <section class="mt-12 w-full">
   <Title title = "¡Ellos ya confiaron en nosotros! y tú, ¿que esperas ? "/>
-  <div class="flex gap-4 md:gap-12 mt-12 mx-auto justify-center">
-    <img src={ArmanLogo} alt="" class="h-12 md:h-16 w-auto">
-    <img src={UbanetLogo} alt="">
-    <img src={ConceptosPlasticosLogo} alt="">
+  <div class="flex gap-4 md:gap-12 mt-24 mx-auto justify-center">
+    {
+      companys.map((company) => (
+          <img src={company.url} alt={`Logo de la empresa ${company.name}`}  class="h-12 md:h-16 w-auto" />
+    )
+    )}
   </div>
+
+  <Form />
 </section>

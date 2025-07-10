@@ -1,0 +1,27 @@
+---
+import { Icon } from 'astro-icon/components'
+import Logo from '../../assets/logo-white.svg?url'
+---
+
+<footer class="mt-12">
+  <img src={Logo} alt=" Logo de la empresa " class="w-48 mx-auto">
+  <section class='grid grid-col-1 md:grid-cols-3  gap-8 mx-auto place-items-center'>
+
+    <div class="row-start-2 row-end-3 md:row-start-1 md:row-end-1">
+      <p class='text-white-800 text-center font-semibold'>@2023 - 2025</p>
+      <p class='text-white-800 text-center font-semibold'>Desarrollado por DIGITAL SECURITY</p>
+    </div>
+
+    <div class="row-start-1 row-end-2 md:row-start-1 md:row-end-1">
+      <p class='text-white-800 text-center font-semibold' >
+       Siempre conectado, siempre protegido.
+      </p>
+    </div>
+
+    <div class='flex gap-4 '>
+      <Icon name='whatsapp-white' class='text-white-800 text-4xl cursor-pointer hover:text-green-500' />
+      <Icon name='facebook' class='text-white-800 text-4xl cursor-pointer hover:text-blue-500' />
+      <Icon name='phone' class='text-white-800 text-4xl cursor-pointer hover:text-green-600' />
+    </div>
+  </section>
+</footer>

@@ -1,0 +1,27 @@
+---
+import RobotSvg from "../../../assets/robot-form.svg?url"
+import CameraSvg from "../../../assets/camera-form.svg?url"
+import InputText from "./InputText.astro"
+import TextArea from "./TextArea.astro"
+import Button from "./Button.astro"
+---
+
+<article class=" w-full md:w-[800px] bg-greenDark-900 rounded-3xl py-4 mx-auto mt-24  overflow-hidden relative ">
+  <section class="flex h-full relative z-10">
+    <div class=" flex flex-col justify-center items-center w-full md:w-1/2 h-[100%] bg-greenDark-900 rounded-br-[60px] p-2 md:p-8">
+       <h2 class="md:text-2xl uppercase text-white-800 text-center font-bold mt-4 md:mt-0"> cuentanos tu proyecto! </h2>
+       <form action="" class="flex flex-col gap-6 mt-8">
+         <InputText label="nombre" />
+         <InputText label="teléfono" />
+         <TextArea  label="observaciones"/>
+         <Button />
+       </form>
+    </div>
+    <div class=" hidden invisible md:visible md:block md:w-1/2 bg-yellow-primary-800 rounded-tl-[60px]  relative">
+      <img src={CameraSvg} alt="Imagen representativa de una camara de videovigilancia" class="absolute top-0 w-68 -right-2" />
+      <img src={RobotSvg} alt="Imagen representativa de un robot" class="absolute bottom-0 w-[90%] left-1/2 -translate-x-1/2" />
+    </div>
+  </section>
+
+  <div class="hidden invisible md:visible md:absolute bottom-0 left-0 right-0 h-28 w-full bg-yellow-primary-800 z-0 rounded-bl-4xl"> </div>
+</article>
