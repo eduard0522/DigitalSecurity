@@ -1,0 +1,32 @@
+---
+import { Icon } from "astro-icon/components"
+import CameraImage1 from "../../assets/camera-mtto-1.jpg?url"
+import CameraImage2 from "../../assets/camera-mtto-2.jpg?url"
+import CameraImage3 from "../../assets/camera-mtto-3.jpg?url"
+import Button from "./Button.astro"
+
+---
+
+<article class="grid grid-cols-1 md:grid-cols-12 mt-12 gap-8 mx-auto">
+  <div class="md:col-start-1 md:col-end-6">
+    <h3 class="text-3xl text-yellow-primary-600 pb-1 font-semibold"> Instalación y mantenimiento de sistemas de seguridad </h3>
+  <p class="text-white-700 py-8">
+    Ofrecemos una amplia gama de <span class="font-semibold text-yellow-primary-800"> soluciones innovadoras en seguridad </span>soluciones innovadoras en seguridad, diseñadas para proteger lo que más valoras: tus bienes más preciados y la tranquilidad de tus seres queridos. Nuestro compromiso es garantizar tu paz mental mediante sistemas avanzados y confiables que se adaptan a tus necesidades específicas.</p>
+
+  <p class="text-white-700">
+    Contamos con equipos de última tecnología, que te permiten vigilar, monitorear y proteger tu hogar, oficina o negocio en tiempo real, desde cualquier lugar del mundo. Gracias a nuestras soluciones, podrás mantener un control constante y directo, ya sea a través de tu teléfono, tableta o computadora, asegurándote de que todo esté bajo supervisión, incluso cuando estás lejos.
+  </p>
+  <Button />
+  </div>
+  <div class=" flex flex-col justify-between items-center md:col-start-6 md:col-end-9 place-items-center">
+    <img src={CameraImage1} alt="Imagen de una camara de videovigilancia" class="rounded-xl ">
+    <img src={CameraImage2} alt="Imagen de una camara de videovigilancia" class="rounded-xl ">
+  </div>
+  <div class="md:col-start-9 md:col-end-13 self-center">
+    <img src={CameraImage3} alt="Imagen de una camara de videovigilancia" class="rounded-xl " >
+  </div>
+</article>
+
+<div class="w-full flex items-center justify-center mt-12 ">
+  <a href="" class="text-yellow-primary-600 font-semibold flex hover:text-yellow-primary-800"> Obtener cotización gratuita <Icon name="solar-arrow-up-outline"class="rotate-40  text-xl" /> </a>
+</div>
