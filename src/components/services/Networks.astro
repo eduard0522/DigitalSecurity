@@ -1,0 +1,83 @@
+---
+import { Icon } from 'astro-icon/components'
+import FoImage1 from '../../assets/fo1.jpg?url'
+import FoImage2 from '../../assets/fo2.jpg?url'
+import FoImage3 from '../../assets/fo3.jpg?url'
+import Button from './Button.astro'
+---
+
+<div
+  class='networksContent content h-0 opacity-0 overflow-hidden transition-all duration-700'
+>
+  <article class='grid grid-cols-1 md:grid-cols-12 mt-12 gap-8 mx-auto'>
+    <div class='md:col-start-1 md:col-end-6'>
+      <h3 class='text-3xl text-yellow-primary-600 pb-1 font-semibold'>
+        Instalación y mantenimiento de redes de fibra óptica.
+      </h3>
+      <p class='text-white-700 py-8'>
+          Nuestro equipo está altamente capacitado para realizar instalaciones, mantenimiento y reparaciones de redes de fibra óptica con la máxima precisión y calidad. Nos encargamos de identificar cualquier falla, desde problemas de señal hasta cortes en la conexión, y aplicamos soluciones rápidas y efectivas para que vuelvas a disfrutar de una red confiable y de alto rendimiento.
+      </p>
+
+      <p class='text-white-700'>
+          ¿Quieres llevar tu infraestructura al siguiente nivel? También optimizamos y mejoramos tus redes, asegurándonos de que cada cable, conector y punto de acceso funcione a la perfección, maximizando la velocidad y estabilidad de tu conexión.
+          Ya sea en casas, oficinas o grandes empresas, trabajamos con tecnología de vanguardia para garantizar que tu red de fibra óptica esté lista para los desafíos del presente y el futuro. ¡Deja tu red en manos de los expertos!
+      </p>
+      <Button />
+    </div>
+        <div class='hidden md:block md:col-start-6 md:col-end-10 self-center'>
+          <img
+            src={FoImage3}
+            alt='Imagen de una camara de videovigilancia'
+            class='rounded-xl invisible hidden md:visible md:block'
+          />
+         </div>
+
+    <div
+      class='flex flex-col justify-between items-center gap-8 md:gap-0 md:col-start-10 md:col-end-13 place-items-center'
+    >
+      <img
+        src={FoImage1}
+        alt='Imagen de una camara de videovigilancia'
+        class='rounded-xl'
+      />
+      <img
+        src={FoImage2}
+        alt='Imagen de una camara de videovigilancia'
+        class='rounded-xl'
+      />
+    </div>
+
+  </article>
+
+  <div class='w-full flex items-center justify-center mt-12'>
+    <a
+      href=''
+      class='text-yellow-primary-600 font-semibold flex hover:text-yellow-primary-800'
+    >
+      Obtener cotización gratuita <Icon
+        name='solar-arrow-up-outline'
+        class='rotate-40 text-xl'
+      />
+    </a>
+  </div>
+</div>
+
+<style>
+  .content {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+  .content.showContent{
+    height: 750px;
+    opacity: 1;
+  }
+
+   @media (width <= 800px) {
+    .content.showContent{
+      height: auto;
+    }
+  }
+
+</style>

@@ -1,32 +1,90 @@
 ---
-import { Icon } from "astro-icon/components"
-import CameraImage1 from "../../assets/camera-mtto-1.jpg?url"
-import CameraImage2 from "../../assets/camera-mtto-2.jpg?url"
-import CameraImage3 from "../../assets/camera-mtto-3.jpg?url"
-import Button from "./Button.astro"
-
+import { Icon } from 'astro-icon/components'
+import computersImage1 from '../../assets/computers1.jpg?url'
+import computersImage2 from '../../assets/computers2.jpg?url'
+import computersImage3 from '../../assets/computers3.jpg?url'
+import Button from './Button.astro'
 ---
 
-<article class="grid grid-cols-1 md:grid-cols-12 mt-12 gap-8 mx-auto">
-  <div class="md:col-start-1 md:col-end-6">
-    <h3 class="text-3xl text-yellow-primary-600 pb-1 font-semibold"> Instalación y mantenimiento de sistemas de seguridad </h3>
-  <p class="text-white-700 py-8">
-    Ofrecemos una amplia gama de <span class="font-semibold text-yellow-primary-800"> soluciones innovadoras en seguridad </span>soluciones innovadoras en seguridad, diseñadas para proteger lo que más valoras: tus bienes más preciados y la tranquilidad de tus seres queridos. Nuestro compromiso es garantizar tu paz mental mediante sistemas avanzados y confiables que se adaptan a tus necesidades específicas.</p>
+<div
+  class='computers content h-0 opacity-0 overflow-hidden transition-all duration-700'
+>
+  <article class='grid grid-cols-1 md:grid-cols-12 mt-12 gap-8 mx-auto'>
 
-  <p class="text-white-700">
-    Contamos con equipos de última tecnología, que te permiten vigilar, monitorear y proteger tu hogar, oficina o negocio en tiempo real, desde cualquier lugar del mundo. Gracias a nuestras soluciones, podrás mantener un control constante y directo, ya sea a través de tu teléfono, tableta o computadora, asegurándote de que todo esté bajo supervisión, incluso cuando estás lejos.
-  </p>
-  <Button />
-  </div>
-  <div class=" flex flex-col justify-between items-center md:col-start-6 md:col-end-9 place-items-center">
-    <img src={CameraImage1} alt="Imagen de una camara de videovigilancia" class="rounded-xl ">
-    <img src={CameraImage2} alt="Imagen de una camara de videovigilancia" class="rounded-xl ">
-  </div>
-  <div class="md:col-start-9 md:col-end-13 self-center">
-    <img src={CameraImage3} alt="Imagen de una camara de videovigilancia" class="rounded-xl " >
-  </div>
-</article>
+      <div class='hidden md:block md:col-start-1 md:col-end-5 self-center'>
+        <img
+            src={computersImage3}
+            alt='Imagen de una camara de videovigilancia'
+            class='rounded-xl invisible hidden md:visible md:block'
+        />
+      </div>
 
-<div class="w-full flex items-center justify-center mt-12 ">
-  <a href="" class="text-yellow-primary-600 font-semibold flex hover:text-yellow-primary-800"> Obtener cotización gratuita <Icon name="solar-arrow-up-outline"class="rotate-40  text-xl" /> </a>
+     <div
+       class='flex flex-col justify-between items-center gap-8 md:gap-0 md:col-start-5 md:col-end-8 place-items-center'
+       >
+      <img
+        src={computersImage1}
+        alt='Imagen de una camara de videovigilancia'
+        class='rounded-xl'
+      />
+      <img
+        src={computersImage2}
+        alt='Imagen de una camara de videovigilancia'
+        class='rounded-xl'
+      />
+     </div>
+
+     <div class='md:col-start-8 md:col-end-13'>
+      <h3 class='text-3xl text-yellow-primary-600 pb-1 font-semibold'>
+       Instalación y mantenimiento de equipos de computo. 
+      </h3>
+      <p class='text-white-700 py-8'>
+         ¿Tu computador  va lento o no está funcionando como debería? ¿Necesitas una instalación profesional y confiable? Nosotros tenemos la solución.
+
+      </p>
+
+      <p class='text-white-700'>
+       Nos especializamos en la instalación, mantenimiento y reparación de computadores, asegurándonos de que tu equipo esté siempre en óptimas condiciones. Desde la instalación de sistemas operativos y software esencial, hasta la limpieza y optimización de hardware, nuestro equipo capacitado se encarga de mejorar el rendimiento y prolongar la vida útil de tus dispositivos.
+
+      </p>
+
+      <p class='text-white-700 pt-8'>
+        ¿Tienes problemas de lentitud, errores en el sistema o piezas que necesitan ser reemplazadas? No te preocupes, detectamos cualquier falla o anomalía y la solucionamos con rapidez y eficacia. Además, te asesoramos en mejoras y actualizaciones que se adapten a tus necesidades, garantizando que tu equipo esté preparado para cualquier desafío.
+      </p>
+      <Button />
+    </div>
+
+  </article>
+
+  <div class='w-full flex items-center justify-center mt-12'>
+    <a
+      href=''
+      class='text-yellow-primary-600 font-semibold flex hover:text-yellow-primary-800'
+    >
+      Obtener cotización gratuita <Icon
+        name='solar-arrow-up-outline'
+        class='rotate-40 text-xl'
+      />
+    </a>
+  </div>
 </div>
+
+<style>
+  .content {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+  .content.showContent{
+    height: 750px;
+    opacity: 1;
+  }
+
+   @media (width <= 800px) {
+    .content.showContent{
+      height: auto;
+    }
+  }
+
+</style>
