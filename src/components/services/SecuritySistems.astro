@@ -6,12 +6,36 @@ import CameraImage3 from '../../assets/camera-mtto-3.jpg?url'
 import Button from './Button.astro'
 ---
 
-<div
-  class='securityContent content'
->
-  <article class='grid grid-cols-1 md:grid-cols-12 mt-12 gap-8 mx-auto'>
-    <div class='md:col-start-1 md:col-end-6'>
-      <h3 class='text-3xl text-yellow-primary-600 pb-1 font-semibold'>
+<div class='securityContent content'>
+  <article
+    class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 mt-12 gap-8 mx-auto place-items-center'
+  >
+
+   <div class='xl:col-start-1 xl:col-end-5 self-center'>
+      <img
+        src={CameraImage3}
+        alt='Imagen de una camara de videovigilancia'
+        class='rounded-xl invisible hidden md:visible md:block'
+      />
+    </div>
+
+    <div
+      class='flex xl:flex-col justify-between items-center gap-2 xl:gap-8 xl:col-start-5 xl:col-end-8 place-items-center md:invisible md:hidden xl:visible xl:flex'
+    >
+      <img
+        src={CameraImage1}
+        alt='Imagen de una camara de videovigilancia'
+        class='rounded-xl w-1/2 xl:w-full'
+      />
+      <img
+        src={CameraImage2}
+        alt='Imagen de una camara de videovigilancia'
+        class='rounded-xl w-1/2 xl:w-full'
+      />
+    </div>
+
+    <div class='xl:col-start-8 xl:col-end-13'>
+      <h3 class=' text-xl xl:text-3xl text-yellow-primary-600 pb-1 font-semibold'>
         Instalación y mantenimiento de sistemas de seguridad
       </h3>
       <p class='text-white-700 py-8'>
@@ -36,27 +60,6 @@ import Button from './Button.astro'
       </p>
       <Button />
     </div>
-    <div
-      class='flex flex-col justify-between items-center gap-8 md:col-start-6 md:col-end-9 place-items-center'
-    >
-      <img
-        src={CameraImage1}
-        alt='Imagen de una camara de videovigilancia'
-        class='rounded-xl'
-      />
-      <img
-        src={CameraImage2}
-        alt='Imagen de una camara de videovigilancia'
-        class='rounded-xl'
-      />
-    </div>
-    <div class='md:col-start-9 md:col-end-13 self-center'>
-      <img
-        src={CameraImage3}
-        alt='Imagen de una camara de videovigilancia'
-        class='rounded-xl invisible hidden md:visible md:block'
-      />
-    </div>
   </article>
 
   <div class='w-full flex items-center justify-center mt-12'>
@@ -74,19 +77,18 @@ import Button from './Button.astro'
 
 <style>
   .content {
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: all 0.5s ease;
-}
-  .content.showContent{
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+  .content.showContent {
     height: 750px;
     opacity: 1;
   }
-   @media (width <= 800px) {
-    .content.showContent{
+  @media (width <= 800px) {
+    .content.showContent {
       height: auto;
     }
   }
-
 </style>

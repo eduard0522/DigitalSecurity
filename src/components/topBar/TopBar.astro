@@ -6,13 +6,16 @@ import Logo from "./Logo.astro"
 
 
 ---
-<nav class="  md:hidden md:invisible md:scale-0 flex relative z-40 items-center justify-between p-2 w-full bg-greenDark-900/50  backdrop-blur-[4px] nav-movil ">
+
+ <!--  MOBILES  -->
+<nav class="xl:hidden xl:invisible xl:scale-0 flex relative z-40 items-center justify-between p-2 w-full bg-greenDark-900/50  backdrop-blur-[4px] nav-movil ">
     <Logo />
     <div class="menu-button">
       <Icon  name="menu" class="text-white-700 text-5xl"/>
     </div>
 </nav>
 
+<!-- HAMBURGUESA PARA MOBILES -->
 <nav class=" transition-all duration-100 flex flex-col fixed top-0 left-0 right-0 bottom-0 gap-8 z-40  items-center justify-between p-4 bg-greenDark-900/50  backdrop-blur-[4px] closed hamburger-menu">
   <Logo />
   <div class="closed-menu absolute top-5 right-2"> 
@@ -22,7 +25,9 @@ import Logo from "./Logo.astro"
   <Button />
 </nav>
 
-<nav class="hidden invisible md:visible md:flex relative z-40  items-center justify-between px-12 py-2 md:bg-slate-700/30 backdrop-blur-[4px] border-b border-white-700/50">
+<!-- DESKTOP -->
+
+<nav class="hidden invisible xl:visible xl:flex relative z-40  items-center justify-between px-12 py-2 md:bg-slate-700/30 backdrop-blur-[4px] border-b border-white-700/50">
   <Logo />
   <List />
   <Button />

@@ -9,9 +9,9 @@ import Button from './Button.astro'
 <div
   class='devContent content h-0 opacity-0 overflow-hidden transition-all duration-700'
 >
-  <article class='grid grid-cols-1 md:grid-cols-12 mt-12 gap-8 mx-auto'>
-    <div class='md:col-start-1 md:col-end-6'>
-      <h3 class='text-3xl text-yellow-primary-600 pb-1 font-semibold'>
+  <article class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 mt-12 gap-8 mx-auto  place-items-center justify-center'>
+    <div class='xl:col-start-1 xl:col-end-6'>
+      <h3 class='text-xl xl:text-3xl text-yellow-primary-600 pb-1 font-semibold'>
         Desarrollo de páginas y aplicativos web
       </h3>
       <p class='text-white-700 py-8'>
@@ -29,7 +29,7 @@ import Button from './Button.astro'
       </p>
       <Button />
     </div>
-        <div class='hidden md:block md:col-start-6 md:col-end-10 self-center'>
+        <div class='hidden md:block xl:col-start-6 xl:col-end-10 self-center'>
           <img
             src={DevImage3}
             alt='Imagen de una camara de videovigilancia'
@@ -38,17 +38,17 @@ import Button from './Button.astro'
          </div>
 
     <div
-      class='flex flex-col justify-between items-center gap-8 md:gap-0 md:col-start-10 md:col-end-13 place-items-center'
+      class='flex xl:flex-col justify-between items-center gap-2 xl:gap-8 xl:col-start-10 xl:col-end-13 place-items-center md:invisible md:hidden xl:visible xl:flex'
     >
       <img
         src={DevImage1}
         alt='Imagen de una camara de videovigilancia'
-        class='rounded-xl'
+        class='rounded-xl w-1/2 xl:w-full'
       />
       <img
         src={DevImage2}
         alt='Imagen de una camara de videovigilancia'
-        class='rounded-xl'
+        class='rounded-xl w-1/2 xl:w-full'
       />
     </div>
 
