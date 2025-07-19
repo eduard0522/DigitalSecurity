@@ -1,0 +1,27 @@
+---
+import BolderText from "@components/BolderText.astro";
+import Title from "@components/titles/Title.astro";
+import CameraImg from "../../assets/camera-page-mtto.jpg?url"
+import BtnContactWhatsapp from "@components/Buttons/BtnContactWhatsapp.astro";
+
+---
+
+<article class="mt-12 text-white-700 flex gap-12">
+  <div class=" w-3/5 flex flex-col gap-8">
+  <Title title="Mantenimiento de sistemas de seguridad" />
+  <p>¿Tienes problemas con tu circuito cerrado de televisión o sistema de cámaras de seguridad  y no sabes como solucionalo?  No te preocupes, nosotros  si sabemos como solucinar ese problema! </p>
+  <p>
+    Nuestro personal está altamente capacitado para identificar cualquier tipo de falla o anomalía en tu sistema, desde los problemas más simples hasta los más complejos. ¿Crees que solo detectamos los fallos? ¡Para nada! También  nos encargamos de dar el mantenimiento necesario y reparar ese inconveniente que tanto te preocupa.
+  </p>
+  <p>
+    Además, no solo solucionamos problemas; vamos más allá. <BolderText> Evaluamos tu sistema actual, detectamos puntos débiles y los transformamos en áreas más seguras, eficaces y persuasivas. </BolderText> Nuestro objetivo es garantizar que cuentes con un sistema de seguridad que no solo funcione, sino que brinde la máxima protección a tus bienes y seres queridos.
+  </p>
+  <div>
+
+    <BtnContactWhatsapp />
+  </div>
+  </div>
+  <div class="w-2/5/">
+    <img src={CameraImg} alt="Camara con defectos por antiguedad" class="rounded-xl w-full">
+  </div>
+</article>

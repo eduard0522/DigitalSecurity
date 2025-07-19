@@ -1,0 +1,21 @@
+---
+import BannerTop from "@components/PageSecurity/BannerTop.astro";
+import Description from "@components/PageSecurity/Description.astro";
+import HowWeWorkList from "@components/PageSecurity/HowWeWorkList.astro";
+import Maintenance from "@components/PageSecurity/Maintenance.astro";
+import RealTimeMonitoring from "@components/PageSecurity/RealTimeMonitoring.astro";
+import Subtitle from "@components/titles/Subtitle.astro";
+import Title from "@components/titles/Title.astro";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout>
+  <BannerTop />
+  <main class="-translate-y-18 max-w-[1440px] mx-auto">
+    <Description />
+    <h1 class="text-2xl text-yellow-primary-700 font-semibold text-center w-2xl mx-auto py-12"> Instalación de Camaras y sistemas de seguridad en bogota y todo Colombia.  </h1>
+    <HowWeWorkList />
+   <RealTimeMonitoring />
+    <Maintenance />
+  </main>
+</Layout>

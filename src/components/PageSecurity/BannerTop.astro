@@ -1,0 +1,12 @@
+---
+import BannerImage from "../../assets/bannerCameras.jpg?url"
+import cameraWatermark from "../../assets/camera-top-hero.svg?url"
+import BtnContact from "./BtnContact.astro"
+---
+  <header class="w-full -translate-y-18 relative">
+    <img src={BannerImage}  alt="Imagen alusiva a una instalación de camaras de seguridad" class="w-full opacity-80">
+    <img src={cameraWatermark} alt="Marca de agua de una camara de videovigilancia" class="w-36 absolute top-16 right-0" />
+    <BtnContact />
+  </header>
+
+

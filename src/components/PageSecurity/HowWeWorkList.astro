@@ -1,0 +1,61 @@
+---
+import BtnContactWhatsapp from "@components/Buttons/BtnContactWhatsapp.astro";
+import Image1 from "../../assets/cameraList.jpg?url"
+import Image2 from "../../assets/cameraList2.jpg?url"
+
+
+const items = [
+  {
+    title: "Visita técnica y evaluación inicial",
+    description: "Realizamos un diagnóstico detallado en el lugar donde se instalará el sistema de CCTV. Identificamos puntos vulnerables, zonas estratégicas para la colocación de cámaras y áreas que requieren especial atención."
+  },
+  {
+    title: "Diseño del proyecto",
+    description: "Basándonos en tus necesidades, diseñamos un sistema personalizado que cumpla con tus requerimientos específicos. Esto incluye la selección del tipo de cámaras (IP, análogas, con inteligencia artificial, etc.) y el equipo necesario, como DVR o NVR, para optimizar el monitoreo."
+  },
+  {
+    title: "Presentación de soluciones",
+    description: "Te ofrecemos recomendaciones claras y detalladas sobre las posibles soluciones, explicando cómo estas mejorarán la seguridad de tu espacio. Además, ajustamos el plan a tu presupuesto y preferencias."
+  },
+  {
+    title: "Instalación profesional",
+    description: "Nuestro equipo de técnicos se encarga de instalar todo el sistema de manera eficiente y segura. Nos aseguramos de que cada cámara esté colocada estratégicamente para maximizar la cobertura y minimizar puntos ciegos."
+  },
+  {
+    title: "Pruebas y verificación",
+    description: "Una vez instalado, realizamos pruebas exhaustivas para garantizar que todo funcione correctamente y que el sistema cumpla con los objetivos de seguridad establecidos."
+  },
+  {
+    title: "Mantenimiento preventivo y correctivo",
+    description: "Ofrecemos servicios de mantenimiento para mantener el sistema funcionando en óptimas condiciones. Esto incluye revisiones periódicas, detección de fallas y reemplazo de componentes si es necesario."
+  }
+];
+
+---
+<article class="flex gap-12">
+
+  <div class="flex flex-col gap-12 w-1/4">
+    <img src={Image1} alt="Foto de una camara de seguridad" class="rounded-xl " />
+    <img src={Image2} alt="Foto de una camara de seguridad" class="rounded-xl "/>
+  </div>
+  <div class="w-3/4 ">
+    <h2 class="text-white-700 text-2xl pb-12 font-bold"> ¿ Como trabajamos ?</h2>
+    <ol class=" text-white-700">
+      {
+        items.map((item) => {
+          return(
+            <li class="pb-4">
+          <h3 class="font-bold inline"> { item.title }: </h3>
+          <span class="inline text-white-800"> { item.description }</span>
+        </li>
+        )
+        })
+      }
+    </ol>
+    <div class="flex justify-end">
+      <BtnContactWhatsapp />
+    </div>
+  </div>
+
+</article>
+
