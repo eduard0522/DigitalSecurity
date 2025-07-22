@@ -1,0 +1,31 @@
+---
+import ListItem from "./ListItem.astro";
+
+const otherServices = [
+  {
+    title: "Reubicación estratégica",
+    text: "Rediseñamos la ubicación de las cámaras para maximizar la cobertura y eliminar puntos ciegos, asegurando que cada zona crítica esté bien protegida."
+  },
+  {
+    title: "Ajustes y actualizaciones",
+    text: "Actualizamos tu sistema con la tecnología más reciente para garantizar un nivel óptimo de seguridad. Si tus equipos necesitan un refuerzo, como cámaras de mayor resolución o funciones avanzadas, lo integramos fácilmente."
+  },
+  {
+    title: "Corrección de vulnerabilidades",
+    text: "Identificamos puntos débiles en tu sistema y aplicamos mejoras para fortalecer la seguridad en cada rincón de tu espacio."
+  },
+  {
+    title: "Reconfiguración personalizada",
+    text: "Configuramos nuevamente tus dispositivos para garantizar un acceso rápido, monitoreo remoto desde cualquier lugar y almacenamiento eficiente de las grabaciones."
+  }
+];
+---
+<ul class="mt-12 list-disc pl-12">
+  {
+    otherServices.map((service) => {
+      return(
+        <ListItem  title={service.title} text={service.text} />
+      )
+    })
+  }  
+</ul>

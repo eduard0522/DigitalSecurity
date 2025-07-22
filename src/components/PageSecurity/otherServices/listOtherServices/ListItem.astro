@@ -1,0 +1,12 @@
+---
+interface Props {
+  title : string
+  text : string
+}
+
+const { title , text} = Astro.props
+---
+
+<li class="text-white-700 ">
+  <p class="inline-block pb-4 "> <strong  class="text-lg"> {title} </strong>   : { text } </p>
+</li>

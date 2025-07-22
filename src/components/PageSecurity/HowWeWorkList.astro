@@ -32,13 +32,13 @@ const items = [
 ];
 
 ---
-<article class="flex gap-12">
+<article class="flex flex-col xl:flex-row gap-12 ">
 
-  <div class="flex flex-col gap-12 w-1/4">
-    <img src={Image1} alt="Foto de una camara de seguridad" class="rounded-xl " />
+  <div class="flex flex-col md:flex-row lg:flex-col gap-12 w-full  mx-auto lg:w-1/4">
+    <img src={Image1} alt="Foto de una camara de seguridad" class="rounded-xl hidden md:block" />
     <img src={Image2} alt="Foto de una camara de seguridad" class="rounded-xl "/>
   </div>
-  <div class="w-3/4 ">
+  <div class=" xl:w-3/4 ">
     <h2 class="text-white-700 text-2xl pb-12 font-bold"> ¿ Como trabajamos ?</h2>
     <ol class=" text-white-700">
       {

@@ -1,0 +1,20 @@
+---
+import BtnContactWhatsapp from "@components/Buttons/BtnContactWhatsapp.astro";
+import Parragraph from "./Parragraph.astro";
+import ListOtherServices from "./listOtherServices/ListOtherServices.astro";
+
+---
+
+<section class="mt-6">
+  <Parragraph  text="Adicionalmente, ofrecemos servicios especializados para trasladar, reconfigurar y reubicar tu circuito cerrado de televisión (CCTV) ya existente. Si necesitas mover tus equipos a una nueva ubicación o ajustar su configuración para mejorar la eficiencia, estamos aquí para ayudarte."/>
+
+  <Parragraph text="Nuestro equipo de técnicos expertos se encarga de analizar tu sistema actual, identificar posibles puntos débiles y optimizar su funcionamiento. Esto incluye:"/>
+  
+  <ListOtherServices />
+
+  <Parragraph text="Con este servicio, no solo optimizamos tu sistema existente, sino que también te brindamos tranquilidad y confianza al saber que tu seguridad está en manos de expertos. Hacemos que tu circuito sea más eficiente, más seguro y mejor adaptado a tus necesidades actuales."/>
+
+  <div class="flex justify-end">
+    <BtnContactWhatsapp />
+  </div>
+</section>

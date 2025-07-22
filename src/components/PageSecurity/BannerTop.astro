@@ -1,12 +1,28 @@
 ---
-import BannerImage from "../../assets/bannerCameras.jpg?url"
-import cameraWatermark from "../../assets/camera-top-hero.svg?url"
-import BtnContact from "./BtnContact.astro"
+import BannerImage from '../../assets/bannerCameras.jpg?url'
+import cameraWatermark from '../../assets/camera-top-hero.svg?url'
+import BtnContact from './BtnContact.astro'
 ---
-  <header class="w-full -translate-y-18 relative">
-    <img src={BannerImage}  alt="Imagen alusiva a una instalación de camaras de seguridad" class="w-full opacity-80">
-    <img src={cameraWatermark} alt="Marca de agua de una camara de videovigilancia" class="w-36 absolute top-16 right-0" />
-    <BtnContact />
-  </header>
 
+<header class='w-full -translate-y-18 relative'>
+  <div class='h-[40vh] md:w-full opacity-80 bg-cover bg-image'></div>
+  <img
+    src={cameraWatermark}
+    alt='Marca de agua de una camara de videovigilancia'
+    class='opacity-0 hidden md:opacity-100 md:absolute md:w-36  top-16 right-0'
+  />
+  <BtnContact />
+</header>
 
+<style>
+  .bg-image {
+    background-image: url('../../assets/bannerCameras.jpg');
+    background-size: cover;
+  }
+
+  @media screen and (max-width: 620px) {
+    .bg-image {
+      background-image: url('../../assets/bannerCamerasMobile.jpg');
+    }
+  }
+</style>
