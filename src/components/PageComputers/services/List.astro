@@ -1,0 +1,37 @@
+---
+import ListItem from "./ListItem.astro";
+
+const services = [
+  {
+    title: "Instalación de software y sistemas operativos",
+    paragraph: "todo listo y funcionando desde el primer clic."
+  },
+  {
+    title: "Limpieza interna y mantenimiento preventivo",
+    paragraph: "tu equipo limpio, fresco y rápido."
+  },
+  {
+    title: "Formateo, actualización y recuperación",
+    paragraph: "vuelve a empezar sin perder nada."
+  },
+  {
+    title: "Protección de datos e instalación de antivirus",
+    paragraph: "seguridad total sin complicaciones."
+  },
+  {
+    title: "Diagnóstico y reemplazo de piezas",
+    paragraph: "detectamos y reparamos al instante."
+  },
+  {
+    title: "Mantenimiento preventivo y correctivo",
+    paragraph: "tu PC siempre al 100%."
+  }
+];
+
+---
+
+<ul class="my-8  text-white-700 pl-8 xl:pl-18 list-disc text-lg">
+  {
+    services.map((item) => <ListItem title={item.title} paragraph={item.paragraph} />)
+  }
+</ul>

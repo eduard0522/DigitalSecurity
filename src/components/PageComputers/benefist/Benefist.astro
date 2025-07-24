@@ -1,0 +1,21 @@
+---
+import BolderText from "@components/BolderText.astro";
+import Title from "@components/titles/Title.astro";
+import List from "./List.astro";
+import ImageHappyChildrens from "../../../assets/PageComputers/childrens-happy.jpg?url"
+import BtnContactWhatsapp from "@components/Buttons/BtnContactWhatsapp.astro";
+
+---
+
+<section class="flex flex-col-reverse xl:flex-row gap-12  mt-12">
+  <div class="xl:w-1/2">
+    <img src={ImageHappyChildrens} alt="Foto de niños felices con un computador portatil" class="rounded-xl w-full">
+  </div>
+  <div class="xl:w-1/2">
+    <Title title="¿Quién dijo que tener una PC rápida no cambia tu vida?" />
+    <p class="text-lg text-white-700 py-12"> Imagina prender tu computador y que todo funcione al instante. Sin cargas eternas, sin pantallas congeladas, sin tener que reiniciar mil veces.</p>
+    <p class="text-white-700 text-lg">Aquí te dejamos algunos motivos por los que <BolderText> una PC veloz marca la diferencia: </BolderText></p>
+    <List />
+    <BtnContactWhatsapp />
+  </div>
+</section>

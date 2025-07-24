@@ -1,0 +1,28 @@
+---
+import { Icon } from "astro-icon/components";
+import ListItem from "./ListItem.astro";
+
+const problems = [
+  "Se demora una eternidad en encender",
+  "Abres una página… y te da tiempo de hacer un café",
+  "El ventilador suena como si fuera a despegar",
+  "Se congela cuando más lo necesitas",
+  "Le das doble clic y no pasa nada",
+  "Se reinicia solo sin razón aparente",
+  "No reconoce tu USB o disco duro",
+  "No te deja instalar programas nuevos",
+  "El mouse y el teclado se traban sin explicación",
+  "Se calienta con solo abrir un par de pestañas",
+  "Te bombardea con errores o pantallas azules",
+  "No guarda tus archivos o tarda horas en copiarlos"
+];
+
+---
+<ul class=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 mt-12"> 
+  {
+    problems.map((problem) => <ListItem text={problem}  />)
+      
+  }
+
+ 
+</ul>

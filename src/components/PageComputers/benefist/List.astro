@@ -1,0 +1,33 @@
+---
+import ListItem from "./ListItem.astro";
+
+const benefits = [
+  {
+    title: "Trabajas a otro nivel",
+    paragraph: "haces más en menos tiempo y sin perder el hilo."
+  },
+  {
+    title: "Juegas sin límites",
+    paragraph: "cero lag, máximo rendimiento, solo diversión."
+  },
+  {
+    title: "Tu creatividad fluye",
+    paragraph: "edita, diseña, crea sin que el sistema te frene."
+  },
+  {
+    title: "Estudias con foco",
+    paragraph: "sin distracciones, sin esperas, solo tú y tu meta."
+  },
+  {
+    title: "Ganas paz mental",
+    paragraph: "se acabó el estrés de una máquina lenta y rebelde."
+  }
+];
+
+---
+
+<ul class="my-8  text-white-700 pl-8 list-disc text-lg">
+  {
+    benefits.map((benefit) => <ListItem title={benefit.title} paragraph={benefit.paragraph} />)
+  }
+</ul>

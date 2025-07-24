@@ -1,0 +1,23 @@
+---
+import Contact from "@components/contact/Contact.astro";
+import BannerTop from "@components/PageComputers/BannerTop.astro";
+import Benefist from "@components/PageComputers/benefist/Benefist.astro";
+import IntroPage from "@components/PageComputers/IntroPage.astro";
+import Services from "@components/PageComputers/services/Services.astro";
+import SymptomsFailing from "@components/PageComputers/symptomsFailing/SymptomsFailing.astro";
+import Layout from "@layouts/Layout.astro";
+
+
+---
+
+
+<Layout>
+    <BannerTop />
+    <main class="max-w-[1440px] -translate-y-18 mx-auto px-2 md:px-4 2xl:px-0">
+      <IntroPage />
+      <Services />
+      <Benefist />
+      <SymptomsFailing />
+      <Contact />
+    </main>
+</Layout>

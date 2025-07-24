@@ -1,0 +1,13 @@
+---
+interface Props{
+  title: string,
+  paragraph:string
+}
+
+const { title , paragraph } = Astro.props
+
+---
+
+<li class="text-white-800">
+    <strong class="text-white-700"> {title} </strong> : { paragraph }
+</li>
