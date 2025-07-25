@@ -1,0 +1,22 @@
+---
+interface Props{
+  image: string
+  label:string
+}
+
+const { image , label } = Astro.props
+---
+
+<article class="bg-cover mt-12 w-2xs h-72 rounded-xl flex justify-center items-center relative overflow-hidden px-8"
+  style={`background-image: url('${image}');`}
+>
+<div class="absolute top-0 left-0 right-0 bottom-0 bg-greenDark-950/30 backdrop-blur-[2px]">
+
+</div>
+<h3 class="text-white border-y-2 border-l-2 inline py-8 px-4 font-bold text-xl before:w-0.5 relative before:bg-amber-50 before:h-8 before:block before:absolute before:top-0 before:right-0 after:w-2 after:bg-amber-50 after:h-2 after:block after:absolute after:top-8 after:-right-2 after:-translate-x-[60%] after:-rotate-45">
+   { label }
+</h3>
+
+</article>
+
+

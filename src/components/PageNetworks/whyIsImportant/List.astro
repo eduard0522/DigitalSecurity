@@ -1,0 +1,33 @@
+---
+import BolderText from "@components/BolderText.astro";
+import ListItem from "./ListItem.astro";
+
+const problems = [
+  {
+    title: "Latencia elevada",
+    description: "Retrasos perceptibles en la respuesta de aplicaciones o en la transferencia de datos entre sedes."
+  },
+  {
+    title: "Pérdida de paquetes",
+    description: "Cortes intermitentes en servicios de VoIP, videoconferencias o aplicaciones críticas."
+  },
+  {
+    title: "Ancho de banda insuficiente",
+    description: "Saturación de la red en horas pico, que limita operaciones y afecta a múltiples usuarios simultáneamente."
+  },
+  {
+    title: "Problemas de cobertura WiFi",
+    description: "Zonas muertas que impactan la movilidad del personal dentro de las instalaciones."
+  },
+  {
+    title: "Desactualización de equipos de red",
+    description: "Routers, switches y puntos de acceso con firmware obsoleto o sin soporte técnico."
+  }
+];
+---
+<ul class="flex flex-col gap-4 mt-8 list-disc px-12 text-lg">
+    <h3>A continuación, algunas <BolderText > alertas técnicas que indican la necesidad de revisar o actualizar la red corporativa:</BolderText> </h3>
+    {
+      problems.map((problem) => <ListItem title={problem.title} description={problem.description}/>)
+    }
+</ul>

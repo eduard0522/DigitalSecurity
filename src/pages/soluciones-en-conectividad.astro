@@ -1,0 +1,18 @@
+---
+import BannerTop from "@components/PageNetworks/BannerTop.astro";
+import IntroPage from "@components/PageNetworks/IntroPage.astro";
+import Services from "@components/PageNetworks/services/Services.astro";
+import WhyIsImportant from "@components/PageNetworks/whyIsImportant/WhyIsImportant.astro";
+import Layout from "@layouts/Layout.astro";
+
+
+---
+
+<Layout> 
+  <BannerTop />
+  <main class="max-w-[1440px] mx-auto -translate-y-18 px-4 2xl:px-0">
+    <IntroPage />
+    <Services />
+    <WhyIsImportant />
+  </main>
+</Layout>

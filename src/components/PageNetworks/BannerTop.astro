@@ -1,0 +1,28 @@
+---
+import cameraWatermark from '../../assets/camera-top-hero.svg?url'
+import BtnContactBannerTop from '@components/Buttons/BtnContactBannerTop.astro'
+ 
+---
+
+<div class='w-full -translate-y-18 relative'>
+  <div class='h-[40vh] md:w-full opacity-80 bg-cover bg-image'> {' '}</div>
+  <img
+    src={cameraWatermark}
+    alt='Marca de agua de una camara de videovigilancia'
+    class='opacity-0 hidden md:opacity-100 md:absolute md:w-36  top-16 right-0'
+  />
+  <BtnContactBannerTop text='Soluciones en  conectividad' />
+</div>
+
+<style>
+  .bg-image {
+    background-image: url('../../assets/pageNetworks/background-top.jpg');
+    background-size: cover;
+  }
+
+  @media screen and (max-width: 620px) {
+    .bg-image {
+      background-image: url('../../assets/pageNetworks/background-top.jpg');
+    }
+  }
+</style>
