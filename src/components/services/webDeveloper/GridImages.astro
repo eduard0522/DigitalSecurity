@@ -1,0 +1,29 @@
+---
+import DevImage1 from '../../../assets/devWeb1.jpg?url'
+import DevImage2 from '../../../assets/devWeb2.jpg?url'
+import DevImage3 from '../../../assets/devWeb3.jpg?url'
+---
+
+<div class="xl:col-start-7 xl:col-end-13 flex gap-4 xl:gap-12 ">
+  <div class='hidden md:block xl:w-7/12 self-center'>
+    <img
+      src={DevImage3}
+      alt='Imagen de una camara de videovigilancia'
+      class='rounded-xl invisible hidden md:visible md:block'
+    />
+  </div>
+  <div 
+    class='flex xl:flex-col justify-between items-center gap-2 xl:gap-8 xl:w-5/12 md:invisible md:hidden xl:visible xl:flex'
+  >
+    <img
+      src={DevImage1}
+      alt='Imagen de una camara de videovigilancia'
+      class='rounded-xl w-[47%] xl:w-full'
+    />
+    <img
+      src={DevImage2}
+      alt='Imagen de una camara de videovigilancia'
+      class='rounded-xl w-[47%] xl:w-full'
+    />
+  </div>
+</div>

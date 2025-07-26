@@ -1,0 +1,17 @@
+---
+import { Icon } from 'astro-icon/components'
+const { icon, title, contentComponent, className } = Astro.props
+---
+
+<div class={`group ${className}`}>
+  <article class="flex gap-4 md:gap-12 border-b-2 border-white-700 group mx-auto md:w-9/10 mt-12 xl:w-2/3 pb-2 justify-between cursor-pointer">
+    <Icon name={icon} class="text-5xl text-white-700" />
+    <h3 class="uppercase text-sm text-center md:text-xl text-white-700 group-hover:text-yellow-primary-600">
+      {title}
+    </h3>
+    <Icon name="arrow-circle" class="icon transition-all text-5xl text-white-700 group-hover:text-yellow-primary-600" />
+  </article>
+  <div class="service-content content transition-all duration-700 ease-in-out">
+    <slot />
+  </div>
+</div>

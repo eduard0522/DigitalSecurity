@@ -1,0 +1,29 @@
+---
+import SeeMoreInformation from '@components/Buttons/SeeMoreInformation.astro'
+import GridImages from './GridImages.astro'
+import BtnContactWhatsapp from '@components/Buttons/BtnContactWhatsapp.astro'
+---
+  <article class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 mt-12 gap-4 xl:gap-12'>
+      <GridImages />
+     <div class='xl:col-start-8 xl:col-end-13 xl:text-lg'>
+        <h3 class='text-xl xl:text-3xl text-yellow-primary-600 pb-1 font-semibold'>
+        Instalación y mantenimiento de equipos de computo. 
+        </h3>
+        <p class='text-white-700 py-6 xl:py-8'>
+          ¿Tu computador  va lento o no está funcionando como debería? ¿Necesitas una instalación profesional y confiable? Nosotros tenemos la solución.
+
+        </p>
+
+        <p class='text-white-700'>
+        Nos especializamos en la instalación, mantenimiento y reparación de computadores, asegurándonos de que tu equipo esté siempre en óptimas condiciones. Desde la instalación de sistemas operativos y software esencial, hasta la limpieza y optimización de hardware, nuestro equipo capacitado se encarga de mejorar el rendimiento y prolongar la vida útil de tus dispositivos.
+
+        </p>
+
+        <p class='text-white-700 pt-6 xl:pt-8'>
+          ¿Tienes problemas de lentitud, errores en el sistema o piezas que necesitan ser reemplazadas? No te preocupes, detectamos cualquier falla o anomalía y la solucionamos con rapidez y eficacia. Además, te asesoramos en mejoras y actualizaciones que se adapten a tus necesidades, garantizando que tu equipo esté preparado para cualquier desafío.
+        </p>
+        <BtnContactWhatsapp />
+    </div>
+  </article>
+
+<SeeMoreInformation path='./equipos-de-computo' />

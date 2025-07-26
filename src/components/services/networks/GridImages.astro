@@ -1,0 +1,30 @@
+---
+import FoImage1 from '../../../assets/fo1.jpg?url'
+import FoImage2 from '../../../assets/fo2.jpg?url'
+import FoImage3 from '../../../assets/fo3.jpg?url'
+---
+
+<div class='xl:col-start-6 xl:col-end-13 flex gap-12'>
+    <div class='hidden md:block xl:w-6/10'>
+      <img
+        src={FoImage3}
+        alt='Imagen de cableado y fibra optica'
+        class='rounded-xl w-full invisible hidden md:visible md:block'
+      />
+    </div>
+
+    <div
+      class='flex xl:flex-col justify-between items-center gap-2 md:invisible md:hidden xl:visible xl:flex xl:gap-8 xl:w-4/10'
+    >
+      <img
+        src={FoImage1}
+        alt='Imagen de cableado y fibra optica'
+        class='rounded-xl w-[47%] xl:w-full'
+      />
+      <img
+        src={FoImage2}
+        alt='Imagen de cableado y fibra optica'
+        class='rounded-xl w-[47%] xl:w-full'
+      />
+    </div>
+</div>

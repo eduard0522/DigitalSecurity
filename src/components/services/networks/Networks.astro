@@ -1,0 +1,25 @@
+---
+import SeeMoreInformation from '@components/Buttons/SeeMoreInformation.astro'
+import GridImages from './GridImages.astro'
+import BtnContactWhatsapp from '@components/Buttons/BtnContactWhatsapp.astro'
+---
+  <article class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 mt-12 gap-4 xl:gap-12'>
+    <div class='xl:col-start-1 xl:col-end-6 xl:text-lg'>
+      <h3 class='text-xl xl:text-3xl text-yellow-primary-600 pb-1 font-semibold'>
+        Instalación y mantenimiento de redes de fibra óptica.
+      </h3>
+      <p class='text-white-700 py-8'>
+          Nuestro equipo está altamente capacitado para realizar instalaciones, mantenimiento y reparaciones de redes de fibra óptica con la máxima precisión y calidad. Nos encargamos de identificar cualquier falla, desde problemas de señal hasta cortes en la conexión, y aplicamos soluciones rápidas y efectivas para que vuelvas a disfrutar de una red confiable y de alto rendimiento.
+      </p>
+
+      <p class='text-white-700'>
+          ¿Quieres llevar tu infraestructura al siguiente nivel? También optimizamos y mejoramos tus redes, asegurándonos de que cada cable, conector y punto de acceso funcione a la perfección, maximizando la velocidad y estabilidad de tu conexión.
+          Ya sea en casas, oficinas o grandes empresas, trabajamos con tecnología de vanguardia para garantizar que tu red de fibra óptica esté lista para los desafíos del presente y el futuro. ¡Deja tu red en manos de los expertos!
+      </p>
+      <BtnContactWhatsapp />
+
+    </div>
+    <GridImages />
+    
+  </article>
+  <SeeMoreInformation path='./soluciones-en-conectividad' />

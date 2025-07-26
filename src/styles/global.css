@@ -10,3 +10,14 @@
   --color-yellow-primary-800: #D5A817;
   --max-w-8xl: 1440px;
 }
+
+.content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.content.showContent {
+  max-height: 2000px; /* ajustable */
+  opacity: 1;
+}

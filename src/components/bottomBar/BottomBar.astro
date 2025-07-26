@@ -1,0 +1,27 @@
+---
+import ListItem from './ListItem.astro'
+
+const icons = [ 
+  {
+  icon: "home",
+  path:"/",
+  blank:false
+  },
+    {
+  icon: "menu",
+  path:"/",
+  blank:false
+  },
+  {
+  icon: "whatsapp-white",
+  path:"https://wa.me/573205697245?text=Hola%20estoy%20interesado%20en%20sus%20servicios",
+  blank:true
+  },
+
+]
+---
+<nav class=" flex w-full  xl:hidden fixed left-0 bottom-0">
+  <ul class="flex justify-evenly w-full bg-white/10 pb-2 backdrop-blur-sm ">
+   { icons.map((item) => <ListItem icon={item.icon}  path={item.path} blank={item.blank} /> )}
+  </ul>
+</nav>

@@ -46,7 +46,6 @@ import Logo from "./Logo.astro"
     const menuButton = document.querySelector(".menu-button") 
 
     if (! menuButton || !(menuButton instanceof HTMLElement)){
-      console.log("no hay boton")
       return
     } 
     menuButton.addEventListener("click", () => {
@@ -67,8 +66,6 @@ import Logo from "./Logo.astro"
       hamburgerMenu.classList.add("closed");
       })
     });
-
-    
     
   });
 </script>

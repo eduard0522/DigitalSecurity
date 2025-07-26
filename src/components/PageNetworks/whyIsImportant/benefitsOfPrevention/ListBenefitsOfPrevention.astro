@@ -1,0 +1,18 @@
+---
+import ListItem from "./ListItem.astro"
+
+const benefits = [
+    "Evitar caídas inesperadas del servicio.",
+    "Detectar y solucionar problemas antes de que afecten tu operación.",
+    "Mejorar la velocidad y estabilidad de tu conexión.",
+    "Asegurar que tus equipos y sistemas estén actualizados y protegidos.",
+    "Ahorrar tiempo y dinero al prevenir fallas mayores.",
+    "Mantener tu red preparada para el crecimiento del negocio."
+  ]
+---
+
+<ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 mt-12"> 
+    {
+      benefits.map((benefit) => <ListItem text={benefit} />)
+    }
+</ul>

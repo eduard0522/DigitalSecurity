@@ -1,10 +1,11 @@
 ---
 import ListItem from "./ListItem.astro"
+
 ---
 
 <ul class="flex flex-col xl:flex-row  gap-8 md:gap-24">
-    <ListItem  content="inicio" path="/"/>
-    <ListItem  content="servicios" path="/servicios"/>
-    <ListItem  content="nosotros" path="/nosotros"/>
-    <ListItem  content="contacto" path="/contacto"/>
+    <ListItem  content="inicio" icon="home" path="/"  />
+    <ListItem  content="servicios" icon="services" path="./#servicios"/>
+    <ListItem  content="nosotros" icon="person-menu" path="./#nosotros"/>
+    <ListItem  content="contacto" icon="call-top-bar" path="./#contacto"/>
 </ul>

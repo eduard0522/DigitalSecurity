@@ -1,4 +1,5 @@
 ---
+import Contact from "@components/contact/Contact.astro";
 import BannerTop from "@components/PageNetworks/BannerTop.astro";
 import IntroPage from "@components/PageNetworks/IntroPage.astro";
 import Services from "@components/PageNetworks/services/Services.astro";
@@ -14,5 +15,14 @@ import Layout from "@layouts/Layout.astro";
     <IntroPage />
     <Services />
     <WhyIsImportant />
+    <p class="text-lg md:text-xl text-white-700 font-bold mt-12 text-center">
+      Contar con una red estable no solo mejora la productividad, sino que también garantiza una experiencia digital segura y sin frustraciones.
+    </p>
+
+    <p class="text-lg md:text-xl text-yellow-primary-600 font-bold mt-12 text-center">
+       Contáctenos y descubra cómo optimizar su conectividad para potenciar la productividad de su organización.
+    </p>
+
+    <Contact />
   </main>
 </Layout>

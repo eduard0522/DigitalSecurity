@@ -1,0 +1,40 @@
+---
+import SeeMoreInformation from '@components/Buttons/SeeMoreInformation.astro'
+import GridImages from './GridImages.astro'
+import BtnContactWhatsapp from '@components/Buttons/BtnContactWhatsapp.astro'
+---
+
+<article
+  class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 mt-12 gap-8 mx-auto place-items-center justify-center'
+>
+  <div class='xl:col-start-1 xl:col-end-7 xl:text-lg'>
+    <h3 class='text-xl xl:text-3xl text-yellow-primary-600 pb-1 font-semibold'>
+      Desarrollo de páginas y aplicativos web
+    </h3>
+    <p class='text-white-700 py-8'>
+      ¿Tienes una idea que quieres llevar al mundo digital? ¿Necesitas una
+      página web o una app que destaque? Nosotros hacemos que suceda.
+    </p>
+
+    <p class='text-white-700'>
+      Nos especializamos en el desarrollo de páginas web y aplicaciones
+      personalizadas, diseñadas para satisfacer tus necesidades y captar la
+      atención de tus usuarios. Desde sitios web corporativos y tiendas en
+      línea, hasta aplicaciones funcionales y creativas, creamos soluciones
+      innovadoras que combinan diseño atractivo, alta velocidad y excelente
+      usabilidad. Con las tecnologías más avanzadas del mercado y un enfoque
+      orientado a resultados, nuestro equipo desarrolla plataformas modernas,
+      seguras y completamente adaptadas a tus objetivos.
+    </p>
+
+    <p class='text-white-700 pt-8'>
+      Lleva tu negocio al siguiente nivel con un sitio web profesional o una app
+      que hable por ti. Transformamos tus ideas en realidad y garantizamos una
+      experiencia digital que impacte y conecte. ¡Hablemos y hagamos crecer tu
+      presencia en línea!
+    </p>
+    <BtnContactWhatsapp />
+  </div>
+  <GridImages />
+</article>
+<SeeMoreInformation path='./desarrollo-web' />

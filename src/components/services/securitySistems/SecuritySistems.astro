@@ -1,0 +1,40 @@
+---
+import SeeMoreInformation from '@components/Buttons/SeeMoreInformation.astro'
+import GridImages from './GridImages.astro'
+import BtnContactWhatsapp from '@components/Buttons/BtnContactWhatsapp.astro'
+---
+  <article
+    class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 mt-12 gap-8'
+  >
+  <GridImages />
+
+    <div class='xl:col-start-8 xl:col-end-13 xl:text-lg'>
+      <h3 class=' text-xl xl:text-3xl text-yellow-primary-600 pb-1 font-semibold'>
+        Instalación y mantenimiento de sistemas de seguridad
+      </h3>
+      <p class='text-white-700 py-8'>
+        Ofrecemos una amplia gama de <span
+          class='font-semibold text-yellow-primary-800'
+        >
+          soluciones innovadoras en seguridad
+        </span>soluciones innovadoras en seguridad, diseñadas para proteger lo
+        que más valoras: tus bienes más preciados y la tranquilidad de tus seres
+        queridos. Nuestro compromiso es garantizar tu paz mental mediante
+        sistemas avanzados y confiables que se adaptan a tus necesidades
+        específicas.
+      </p>
+
+      <p class='text-white-700'>
+        Contamos con equipos de última tecnología, que te permiten vigilar,
+        monitorear y proteger tu hogar, oficina o negocio en tiempo real, desde
+        cualquier lugar del mundo. Gracias a nuestras soluciones, podrás
+        mantener un control constante y directo, ya sea a través de tu teléfono,
+        tableta o computadora, asegurándote de que todo esté bajo supervisión,
+        incluso cuando estás lejos.
+      </p>
+      <BtnContactWhatsapp />
+    </div>
+  </article>
+
+<SeeMoreInformation  path='./sistemas-de-seguridad'/>
+

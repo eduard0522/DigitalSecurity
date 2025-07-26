@@ -1,0 +1,31 @@
+---
+import computersImage1 from '../../../assets/computers1.jpg?url'
+import computersImage2 from '../../../assets/computers2.jpg?url'
+import computersImage3 from '../../../assets/computers3.jpg?url'
+---
+<div class="xl:col-start-1 xl:col-end-8 flex gap-4 md:gap-12 justify-center  ">
+  <div class='md:block xl:w-[55%]'>
+      <img
+            src={computersImage3}
+            alt='Imagen de un computador'
+            class='rounded-xl w-full'
+      />
+      </div>
+
+     <div
+       class='hidden invisible xl:visible xl:flex xl:flex-col items-center xl:gap-12 xl:w-[45%]'
+       >
+      <img
+        src={computersImage1}
+        alt='Imagen de un computador'
+        class='rounded-xl '
+      />
+      <img
+        src={computersImage2}
+        alt='Imagen de un computador'
+        class='rounded-xl'
+      />
+     </div>
+</div>
+
+

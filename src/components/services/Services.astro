@@ -1,160 +1,59 @@
 ---
 import Title from '@components/titles/Title.astro'
-import { Icon } from 'astro-icon/components'
-import SecurirySistems from './SecuritySistems.astro'
-import Networks from './Networks.astro'
-import SecuritySistems from './SecuritySistems.astro'
-import WebDeveloper from './WebDeveloper.astro'
-import Computers from './Computers.astro'
+import Networks from './networks/Networks.astro'
+import SecuritySistems from './securitySistems/SecuritySistems.astro'
+import WebDeveloper from './webDeveloper/WebDeveloper.astro'
+import Computers from './computers/Computers.astro'
+import ServiceItem from './ServiceItem.astro'
 
-const services = [
-  {
-    icon: 'camera',
-    title: 'Instalación y mantenimiento de sistemas de seguridad',
-  },
-  {
-    icon: 'networks',
-    title: 'Diseño, instalación y mantenimiento de infraestructura de red.',
-  },
-  {
-    icon: 'pc',
-    title: 'Instalación y mantenimiento de equipos de computo.',
-  },
-  {
-    icon: 'code',
-    title: 'Diseño y desarrollo de páginas y aplicativos web.',
-  },
-]
 ---
 
-<section class='mt-12 w-full'>
+<section class='mt-12 w-full' id="servicios">
   <Title title='¿En que podemos ayudarte? ' />
+  <ServiceItem icon="networks" title="Diseño, instalación y mantenimiento de infraestructura de red." className="networks">
+    <Networks />
+  </ServiceItem>
 
-        <div class="networks"> 
-          <article class='flex gap-4 md:gap-12 border-b-2 border-white-700 group mx-auto md:w-9/10 mt-12 xl:w-2/3 pb-2 justify-between'>
-            <Icon name="networks" class=' text-5xl text-white-700 cursor-pointer' />
-            <h3 class='uppercase text-sm text-center  md:text-xl text-white-700 cursor-pointer group-hover:text-yellow-primary-600'>
-            Diseño, instalación y mantenimiento de infraestructura de red
-            </h3>
-            <Icon name='arrow-circle' class='transition-all icon text-5xl cursor-pointer text-white-700 group-hover:text-yellow-primary-600' />
-          </article>
-          <Networks />
-        </div>
-     
+  <ServiceItem icon="camera" title="Instalación y mantenimiento de sistemas de seguridad" className="securitySistems">
+    <SecuritySistems />
+  </ServiceItem>
 
-        <div class="group securitySistems">
-         <article class='flex gap-4 md:gap-12 border-b-2 border-white-700 group  mx-auto md:w-9/10 mt-12 xl:w-2/3 pb-2 justify-between'>
-          <Icon name="code" class='text-5xl text-white-700 cursor-pointer' />
-          <h3 class='uppercase text-sm text-center  md:text-xl text-white-700 cursor-pointer group-hover:text-yellow-primary-600'>
-            Instalación y mantenimiento de sistemas de seguridad
-          </h3>
-          <Icon name='arrow-circle' class=' transition-all icon text-5xl cursor-pointer text-white-700 group-hover:text-yellow-primary-600' />
-        </article>
-          <SecuritySistems />
-        </div>
+  <ServiceItem icon="code" title="Diseño y desarrollo de páginas y aplicativos web." className="webDeveloper">
+    <WebDeveloper />
+  </ServiceItem>
 
-        <div class="webDeveloper">
-          <article class='flex gap-4 md:gap-12 border-b-2 border-white-700 group  mx-auto md:w-9/10 mt-12 xl:w-2/3 pb-2 justify-between'>
-          <Icon name="code" class='text-5xl text-white-700 cursor-pointer' />
-          <h3 class='uppercase text-sm text-center  md:text-xl text-white-700 cursor-pointer group-hover:text-yellow-primary-600'>
-          Diseño y desarrollo de páginas y aplicativos web
-          </h3>
-          <Icon name='arrow-circle' class='transition-all icon text-5xl cursor-pointer text-white-700 group-hover:text-yellow-primary-600' />
-        </article>
-        <WebDeveloper />
-        </div>
-
-        <div class="computers">
-            <article class='flex gap-4 md:gap-12 border-b-2 border-white-700 group  mx-auto md:w-9/10 mt-12 xl:w-2/3 pb-2 justify-between'>
-          <Icon name="pc" class='text-5xl text-white-700 cursor-pointer' />
-          <h3 class='uppercase text-sm text-center  md:text-xl text-white-700 cursor-pointer group-hover:text-yellow-primary-600'>
-         Instalación y mantenimiento de equipos de computo
-          </h3>
-          <Icon name='arrow-circle' class=' transition-all icon text-5xl cursor-pointer text-white-700 group-hover:text-yellow-primary-600 ' />
-        </article>
-        <Computers />
-        </div>
+  <ServiceItem icon="pc" title="Instalación y mantenimiento de equipos de cómputo." className="computers">
+    <Computers />
+  </ServiceItem>
         
-
 </section>
 
 <script>
-const securitySistems = document.querySelector(".securitySistems");
-const networks = document.querySelector(".networks");
-const devWeb = document.querySelector(".webDeveloper");
-const computers = document.querySelector(".computers");
+  const serviceGroups = document.querySelectorAll(".group");
 
+  serviceGroups.forEach(section => {
+    section.addEventListener("click", () => {
+      const content = section.querySelector(".service-content");
+      const icon = section.querySelector(".icon");
+      const title = section.querySelector("h3");
 
-if (securitySistems && securitySistems instanceof HTMLElement) {
-  securitySistems.addEventListener("click", () => {
-    const computerContent = securitySistems.querySelector(".securityContent");
-    if (!computerContent || !(computerContent instanceof HTMLElement)) {
-      return;
-    }
-    computerContent.classList.toggle("showContent");
-    securitySistems.querySelector("h3")?.classList.toggle("text-yellow-primary-600")
-    securitySistems.querySelector(".icon")?.classList.toggle("rotate-90")
-    securitySistems.querySelector(".icon")?.classList.toggle("text-yellow-primary-600")
-    validateActive(securitySistems)
+      const isOpen = content?.classList.contains("showContent");
+
+      serviceGroups.forEach(group => {
+        group.querySelector(".service-content")?.classList.remove("showContent");
+        group.querySelector(".icon")?.classList.remove("rotate-90", "text-yellow-primary-600");
+        group.querySelector("h3")?.classList.remove("text-yellow-primary-600");
+      });
+
+      if (!isOpen) {
+        content?.classList.add("showContent");
+        icon?.classList.add("rotate-90", "text-yellow-primary-600");
+        title?.classList.add("text-yellow-primary-600");
+      }
+      
+    });
   });
-}
-
-
-if (networks && networks instanceof HTMLElement) {
-  networks.addEventListener("click", () => {
-    const networksContent = networks.querySelector(".content");
-    if (!networksContent || !(networksContent instanceof HTMLElement)) {
-      return;
-    }
-    networksContent.classList.toggle("showContent");
-    networks.querySelector("h3")?.classList.toggle("text-yellow-primary-600")
-    networks.querySelector(".icon")?.classList.toggle("rotate-90")
-    networks.querySelector(".icon")?.classList.toggle("text-yellow-primary-600")
-    validateActive(networks)
-  });
-}
-
-if (devWeb && devWeb instanceof HTMLElement) {
-  devWeb.addEventListener("click", () => {
-    const devContent = devWeb.querySelector(".content");
-    if (!devContent || !(devContent instanceof HTMLElement)) {
-      return;
-    }
-    devContent.classList.toggle("showContent");
-    devWeb.querySelector("h3")?.classList.toggle("text-yellow-primary-600")
-    devWeb.querySelector(".icon")?.classList.toggle("rotate-90")
-    devWeb.querySelector(".icon")?.classList.toggle("text-yellow-primary-600")
-    validateActive(devWeb);
-  });
-}
-
-if (computers && computers instanceof HTMLElement) {
-  computers.addEventListener("click", () => {
-    const computerContent = computers.querySelector(".content");
-    if (!computerContent || !(computerContent instanceof HTMLElement)) {
-      return;
-    }
-    computerContent.classList.toggle("showContent");
-    computers.querySelector("h3")?.classList.toggle("text-yellow-primary-600")
-    computers.querySelector(".icon")?.classList.toggle("rotate-90")
-    computers.querySelector(".icon")?.classList.toggle("text-yellow-primary-600")
-    validateActive(computers);
-  });
-}
-
-
-const validateActive = (element : HTMLElement) => {
-  const content = element?.querySelector(".content");
-  if (content?.classList.contains("showContent")) {
-    console.log("Está abierto:", element);
-  } else {
-    console.log("Está cerrado:", element);
-  }
-}
-
-
 </script>
 
- 
 
-  
+

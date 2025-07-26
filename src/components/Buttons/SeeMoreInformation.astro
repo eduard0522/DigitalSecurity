@@ -1,0 +1,19 @@
+---
+import { Icon } from 'astro-icon/components'
+
+interface Props{
+  path:string
+}
+
+const {path} = Astro.props
+---
+
+<div class='w-full flex items-center justify-center mt-12'>
+    <a
+       href={path}
+      class='text-yellow-primary-600 font-semibold flex hover:text-yellow-primary-800'
+    >
+    Ver más información 
+    <Icon name='solar-arrow-up-outline' class='rotate-40 text-xl'/>
+    </a>
+ </div>
